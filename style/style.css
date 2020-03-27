@@ -17,6 +17,7 @@ textarea, input {
 button {
   background-color: #0088AA;
   border: none;
+  
 }
 
 button: focus {
