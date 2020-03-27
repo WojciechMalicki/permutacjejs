@@ -10,16 +10,16 @@ h1 {
   color: #373fff;
 }
 
-textarea, input, button {
+textarea, input {
   border: 2px #0088AA solid;
 }
 
 button {
   background-color: #0088AA;
+  border: none;
 }
 
 button: focus {
-
 outline: none;
 border:none;
 }
