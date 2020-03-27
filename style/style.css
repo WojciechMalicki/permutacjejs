@@ -12,6 +12,9 @@ h1 {
 
 textarea, input {
   border: 2px #0088AA solid;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 3px;
 }
 
 button {
