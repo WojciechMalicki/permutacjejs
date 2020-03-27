@@ -17,3 +17,16 @@ textarea, input, button {
 button {
   background-color: #0088AA;
 }
+
+button: focus {
+
+outline: none;
+border:none;
+}
+
+
+button:hover {
+border: none;
+outline: none;
+box-shadow: none;
+}
