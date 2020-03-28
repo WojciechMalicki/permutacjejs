@@ -1,4 +1,4 @@
-var words = {};
+var words = new Set();
 
 function calculate()
 {
