@@ -23,6 +23,13 @@ function perm(par, w)
 
 function calculate()
 {
+    var res = "";
     var word = document.getElementById("chartext");
-  
+    perm(word.length, word);
+    
+  words.forEach(function(value)
+  {
+      res = res + value + "<br>";          
+                });
+  document.getElementById("results").innerHTML=res;
 }
