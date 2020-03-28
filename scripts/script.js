@@ -2,11 +2,11 @@ var words = new Set();
 
 function perm(par, w)
 {
-  console.Log(w);
+  console.log(w);
   if (par==0)
     {
       words.add(w);
-      console.Log(w);
+      console.log(w);
     }
   else
     {
@@ -25,8 +25,10 @@ function perm(par, w)
 
 function calculate()
 {
-    var res = "";
+   
+  var res = "";
     var word = document.getElementById("chartext").value;
+  console.log(123); 
     perm(word.length, word);
     
   
