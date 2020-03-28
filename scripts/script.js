@@ -2,9 +2,11 @@ var words = new Set();
 
 function perm(par, w)
 {
-  if (par==1)
+  console.Log(w);
+  if (par==0)
     {
       words.add(w);
+      console.Log(w);
     }
   else
     {
@@ -24,12 +26,9 @@ function perm(par, w)
 function calculate()
 {
     var res = "";
-    var word = document.getElementById("chartext");
+    var word = document.getElementById("chartext").value;
     perm(word.length, word);
     
-  words.forEach(function(value)
-  {
-      res = res + value + "<br>";          
-                });
-  document.getElementById("results").innerHTML=res;
+  
+  document.getElementById("results").innerHTML=words.size;
 }
