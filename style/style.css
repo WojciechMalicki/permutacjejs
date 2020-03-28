@@ -17,10 +17,19 @@ textarea, input {
   padding: 3px;
 }
 
+input {
+  height: 14px;
+}
 button {
-  background-color: #0088AA;
-  border: none;
-  
+  background-color: #0088AA; 
+  border: 1px #0088AA solid;
+  color: white;
+  padding: 2px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition-duration: 0.4s;
 }
 
 button: focus {
@@ -30,7 +39,7 @@ border:none;
 
 
 button:hover {
-border: none;
-outline: none;
-box-shadow: none;
+  background-color: white; 
+  color: #0088AA;
+  border: 1px #0088AA solid;
 }
