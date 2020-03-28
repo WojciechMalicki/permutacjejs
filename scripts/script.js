@@ -1,6 +1,6 @@
-words = {};
+var words = {};
 
 function calculate()
 {
-
+    
 }
