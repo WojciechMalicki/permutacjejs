@@ -1,4 +1,4 @@
-var words = new Set();
+var pwords = new Set();
 var res = "";
 
 function addRes(v) {
@@ -8,7 +8,7 @@ function addRes(v) {
 function perm(par, w) {
  
   if (par == 0) {
-    words.add(w);
+    pwords.add(w);
     
   } else {
     for (var i = 0; i < par; i++) {
@@ -24,8 +24,8 @@ function perm(par, w) {
 }
 
 function calculate() {
-  var word = document.getElementById("chartext").value;
-  perm(word.length, word);
-  words.forEach(addRes);
-  document.getElementById("results").innerHTML = res;
+  var pword = document.getElementById("chartext").value;
+  perm(pword.length, pword);
+  pwords.forEach(addRes);
+  document.getElementById("results").innerHTML = pword;
 }
