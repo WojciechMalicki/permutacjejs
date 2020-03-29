@@ -27,5 +27,5 @@ function calculate() {
   var pword = document.getElementById("chartext").value;
   perm(pword.length, pword);
   pwords.forEach(addRes);
-  document.getElementById("results").innerHTML = word.length;
+  document.getElementById("results").innerHTML = res;
 }
