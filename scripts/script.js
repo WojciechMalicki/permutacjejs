@@ -8,8 +8,9 @@ function addRes(v) {
 function perm(par, w) {
  
   if (par == 0) {
-    pwords = pwords.add(w);
+    pwords.add(w);
     console.log(w)
+    return 0;
     
   } else {
     for (var i = 0; i < par; i++) {
