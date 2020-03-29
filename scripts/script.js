@@ -1,6 +1,8 @@
 var pwords = new Set();
 var res = "";
 
+function changeL(w)
+
 function addRes(v) {
   res = res + v + "\n";
 }
