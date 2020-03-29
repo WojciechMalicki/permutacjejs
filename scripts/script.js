@@ -2,7 +2,7 @@ var pwords = new Set();
 var res = "";
 
 function addRes(v) {
-  res = res + v + "<br>";
+  res = res + v + "\n";
 }
 
 function perm(par, w) {
@@ -15,7 +15,7 @@ function perm(par, w) {
       var tmp = w[i];
       w[i] = w[par - 1];
       w[par - 1] = tmp;
-      perm(par - 1);
+      perm(par - 1, w);
       tmp = w[i];
       w[i] = w[par - 1];
       w[par - 1] = tmp;
@@ -27,5 +27,5 @@ function calculate() {
   var pword = document.getElementById("chartext").value;
   perm(pword.length, pword);
   pwords.forEach(addRes);
-  document.getElementById("results").innerHTML = pword;
+  document.getElementById("results").innerHTML = word.length;
 }
