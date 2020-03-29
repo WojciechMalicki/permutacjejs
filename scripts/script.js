@@ -6,10 +6,10 @@ function addRes(v) {
 }
 
 function perm(par, w) {
-  console.log(w);
+ 
   if (par == 0) {
     words.add(w);
-    console.log(w);
+    
   } else {
     for (var i = 0; i < par; i++) {
       var tmp = w[i];
@@ -24,7 +24,6 @@ function perm(par, w) {
 }
 
 function calculate() {
-  
   var word = document.getElementById("chartext").value;
   perm(word.length, word);
   words.forEach(addRes);
