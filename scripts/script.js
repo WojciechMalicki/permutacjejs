@@ -1,7 +1,10 @@
 var pwords = new Set();
 var res = "";
 
-function changeL(w)
+function changeL(w, b, e) {
+  var r = w.slice(0,b) + w.slice(e) + w.slice(b+1,e) + w.slice(b) + w.slice(e+1,); 
+  return r;
+}
 
 function addRes(v) {
   res = res + v + "\n";
