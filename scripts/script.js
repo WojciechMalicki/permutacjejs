@@ -8,7 +8,8 @@ function addRes(v) {
 function perm(par, w) {
  
   if (par == 0) {
-    pwords.add(w);
+    pwords = pwords.add(w);
+    console.log(w)
     
   } else {
     for (var i = 0; i < par; i++) {
@@ -26,6 +27,7 @@ function perm(par, w) {
 function calculate() {
   var pword = document.getElementById("chartext").value;
   perm(pword.length, pword);
+  console.log(pwords)
   pwords.forEach(addRes);
   document.getElementById("results").innerHTML = res;
 }
