@@ -1,4 +1,9 @@
 var words = new Set();
+var res = "";
+
+function addRes(v) {
+  res = res + v + "<br>";
+}
 
 function perm(par, w) {
   console.log(w);
@@ -19,10 +24,9 @@ function perm(par, w) {
 }
 
 function calculate() {
-  var res = "";
+  
   var word = document.getElementById("chartext").value;
-  console.log(123);
   perm(word.length, word);
-
-  document.getElementById("results").value = 24552;
+  words.forEach(addRes);
+  document.getElementById("results").innerHTML = res;
 }
