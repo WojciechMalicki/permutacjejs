@@ -1,7 +1,7 @@
 var pwords = new Set();
 var res = "";
 
-function changeL(w, b, e) {
+function changeL(w, b, e) {  
   var r = "";
   if (b < e) {
     if (b > 0) {
@@ -42,6 +42,9 @@ function perm(par, w) {
 }
 
 function calculate() {
+  document.getElementById("results").innerHTML = "";
+  res="";
+  pwords.clear();
   var pword = document.getElementById("chartext").value;
   pwords.add(pword);
   perm(pword.length, pword);
