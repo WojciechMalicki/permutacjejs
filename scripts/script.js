@@ -31,6 +31,7 @@ function addRes(v) {
 
 function perm(par, w) {
   if (par == 0) {
+    console.log("funct_perm: " + w);
     pwords.add(w);
     return 0;
   } else {
@@ -38,6 +39,7 @@ function perm(par, w) {
       if (i<par-1)
         {
           var q = changeL(w, i, par-1);
+          console.log("funct_perm_q: " + q);
         }
       perm(par - 1, q);
     }
@@ -46,8 +48,10 @@ function perm(par, w) {
 
 function calculate() {
   var pword = document.getElementById("chartext").value;
+  pwords.add(pword);
   perm(pword.length, pword);
   console.log(pwords);
   pwords.forEach(addRes);
   document.getElementById("results").innerHTML = res;
+  console.log(res);
 }
