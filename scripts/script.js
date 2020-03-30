@@ -30,7 +30,7 @@ function addRes(v) {
 }
 
 function perm(par, w) {
-   console.log("funct_perm_wyzej: " + w);
+   console.log("funct_perm_wyzej: " + w + ", " + par);
   if (par == 0) {
     console.log("funct_perm: " + w);
     pwords.add(w);
