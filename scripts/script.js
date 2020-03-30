@@ -6,17 +6,22 @@ function changeL(w, b, e) {
   if (b > 0)
   {
     r = r + w.slice(0, b);
+    console.log("1 " + w + ":" + b + ", " + e + " -> " + r);
   }
-  r = r + w.slice(e);
+  r = r + w[e];
+  console.log("2 " + w + ":" + b + ", " + e + " -> " + r);
   if (b < e - 1) {
     r = r + w.slice(b + 1, e);
+    console.log("3 " + w + ":" + b + ", " + e + " -> " + r);
   }
 
-  r = r + w.slice(b);
+  r = r + w[b];
+  console.log("4 " + w + ":" + b + ", " + e + " -> " + r);
   if (e < w.length - 1) {
     r = r + w.slice(e + 1,);
+    console.log("5 " + w + ":" + b + ", " + e + " -> " + r);
   }
-  console.log(w + ":" + b + ", " + e + " -> " + r);
+  console.log("100 " + w + ":" + b + ", " + e + " -> " + r);
   return r;
 }
 
@@ -30,7 +35,10 @@ function perm(par, w) {
     return 0;
   } else {
     for (var i = 0; i < par; i++) {
-      var q = changeL(w, i, par-1);
+      if (i<par-1)
+        {
+          var q = changeL(w, i, par-1);
+        }
       perm(par - 1, q);
     }
   }
