@@ -46,6 +46,7 @@ function calculate() {
   res="";
   pwords.clear();
   var pword = document.getElementById("chartext").value;
+  pword = pword.replace(" ","");
   pwords.add(pword);
   perm(pword.length, pword);
   pwords.forEach(addRes);
